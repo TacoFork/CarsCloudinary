@@ -29,6 +29,4 @@ public class CommandLineRunnerBean implements CommandLineRunner {
         roleRepository.save(adminRole2);
 
     }
-
-    //big picture = defining own schema (user and role classes) and with this new schema we are creating our own specified users/roles
 }
