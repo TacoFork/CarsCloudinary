@@ -43,7 +43,9 @@ public class HomeController {
     @PostMapping("/carAdded")
     public String carAdded(@ModelAttribute Car car, @RequestParam("file") MultipartFile file){
         if (file.isEmpty()){
-            return "redirect:/addCar";
+            car.setPhoto("");
+            carRepository.save(car);
+            return "redirect:/";
         }
         try{
             Map uploadResult = cloudc.upload(file.getBytes(), ObjectUtils.asMap("resourcetype", "auto"));

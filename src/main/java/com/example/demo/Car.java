@@ -14,6 +14,16 @@ public class Car {
 
     private String make, model, description, photo;
 
+    public Car() {
+    }
+
+    public Car(String make, String model, String description, String photo) {
+        this.make = make;
+        this.model = model;
+        this.description = description;
+        this.photo = photo;
+    }
+
     public long getId() {
         return id;
     }
